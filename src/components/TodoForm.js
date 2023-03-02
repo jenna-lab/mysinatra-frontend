@@ -1,42 +1,33 @@
 import "../App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const TodoForm = () => {
-  const [todos, setTodos] = useState([]);
   const [title, setTitle] = useState([]);
   const [description, setDescription] = useState([]);
   const [due_date, setDueDate] = useState([]);
   const [category, setCategory] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:9292/todos")
-      .then((response) => response.json())
-      .then((todos) => setTodos(todos));
-  }, []);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("clicked");
+    const data = { title, description, due_date, category };
+    try {
+      const response = await fetch("http://localhost:9292/todos", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      alert("Todo added successfully");
+      setTitle("");
+      setDescription("");
+      setDueDate("");
+      setCategory("");
+      e.target.reset();
+    } catch (error) {
+      console.error(error);
+    }
   };
-
-  const data = { title, description, due_date, category };
-  try {
-    const response = await fetch("http://localhost:9292/todos", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    alert("Todo added successfully");
-    setTitle("");
-    setDescription("");
-    setDueDate("");
-    setCategory("");
-  } catch (error) {
-    console.error(error);
-  }
-
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
@@ -94,5 +85,4 @@ const TodoForm = () => {
     </div>
   );
 };
-
 export default TodoForm;
