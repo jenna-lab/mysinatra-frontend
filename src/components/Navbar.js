@@ -4,7 +4,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-primary">
       <div className="container-fluid">
-        <Link className="navbar-brand" exact to="/">
+        <Link className="navbar-brand" to="/">
           Todo
         </Link>
         <button

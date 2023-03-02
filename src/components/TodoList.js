@@ -1,31 +1,27 @@
 import { useEffect, useState } from "react";
 
 const TodoList = () => {
-  const [blogs, setBlogs] = useState([]);
+  const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    fetch("")
+    fetch("http://localhost:9292/todos")
       .then((response) => response.json())
-      .then((blogs) => {
-        return setBlogs(blogs);
-      });
-  });
+      .then((todos) => setTodos(todos));
+  }, []);
 
   return (
     <div className="container">
-      <h2>TodoList</h2>
-      <input type="text" />
-      {blogs.map((blog) => (
-        <ul>
-          <li>{blog.title}</li>
-          <li>{blog.description}</li>
-          <li>{blog.due_date}</li>
-          <button className="btn btn-primary">View Todo</button>{" "}
-          <button className="btn btn-danger">Delete Todo</button>
+      {todos.map((todo, id) => (
+        <ul key={id}>
+          <li>{todo.title}</li>
+          <li>{todo.description}</li>
+          <li>{todo.due_date}</li>
+          <button className="btn btn-secondary">Edit</button>{" "}
+          <button className="btn btn-primary">Save</button>{" "}
+          <button className="btn btn-danger">Delete</button>
         </ul>
       ))}
     </div>
   );
 };
-
 export default TodoList;
