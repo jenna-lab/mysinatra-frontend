@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
@@ -34,7 +35,9 @@ const TodoList = () => {
           <li>{todo.title}</li>
           <li>{todo.description}</li>
           <li>{todo.due_date}</li>
-          <button className="btn btn-secondary">Edit</button>{" "}
+          <Link to={`/to-do/${todo.id}`} className="btn btn-secondary">
+            Edit
+          </Link>{" "}
           <button className="btn btn-primary">Save</button>{" "}
           <button
             className="btn btn-danger"
