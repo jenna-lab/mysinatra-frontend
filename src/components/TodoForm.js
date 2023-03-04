@@ -71,13 +71,17 @@ const TodoForm = ({ addTodo }) => {
           <label htmlFor="category" className="form-label">
             Category
           </label>
-          <input
+          <select
+            value={category}
             onChange={(e) => setCategory(e.target.value)}
-            type="text"
-            className="form-control"
+            className="form-select"
             id="category"
-            placeholder="Category"
-          />
+          >
+            <option value="">Select category</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Family">Family</option>
+          </select>
         </div>
         <div className="mb-3">
           <button className="btn btn-primary">Submit</button>
