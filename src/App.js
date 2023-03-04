@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/to-do" element={<Todo />} />
         <Route path="/add-to-do" element={<TodoForm />} />
+        <Route path="/to-do/:id" element={<Todo />} />
       </Routes>
     </div>
   );

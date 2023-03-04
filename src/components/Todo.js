@@ -34,11 +34,7 @@ const Todo = () => {
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [due_date, setDueDate] = useState("");
-  const [categories, setCategories] = useState([
-    "Personal",
-    "Work",
-    "Shopping",
-  ]);
+  const [categories, setCategories] = useState(["Personal", "Work", "Shopping"]);
 
   useEffect(() => {
     fetch(`http://localhost:9292/todos/${id}`)
