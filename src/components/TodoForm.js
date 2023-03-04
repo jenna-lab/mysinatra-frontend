@@ -1,11 +1,12 @@
 import "../App.css";
 import { useState } from "react";
 
-const TodoForm = () => {
+const TodoForm = ({ addTodo }) => {
   const [title, setTitle] = useState([]);
   const [description, setDescription] = useState([]);
   const [due_date, setDueDate] = useState([]);
   const [category, setCategory] = useState([]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("clicked");
