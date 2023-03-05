@@ -18,7 +18,7 @@ We build a todo list application with a React frontend interface and a Sinatra b
 
 ## SetUp/Installation requirements
 
-    - Create a new React app using npx create-react-app.
+- Create a new React app using npx create-react-app.
 
 - Set up the necessary dependencies for the frontend, including fetch (for making HTTP requests), react-router-dom (for handling client-side routing), and any other dependencies required for the project.
 
