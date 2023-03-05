@@ -44,6 +44,9 @@ const TodoList = () => {
           >
             Delete
           </button>
+          <Link to={`/to-do/${todo.id}`} className="btn btn-primary">
+            View
+          </Link>
         </ul>
       ))}
     </div>

@@ -16,7 +16,6 @@
 
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Select, MenuItem } from "@material-ui/core";
 
 import {
   Button,
@@ -32,9 +31,7 @@ const Todo = () => {
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [category, setCategory] = useState("");
   const [due_date, setDueDate] = useState("");
-  const [categories, setCategories] = useState(["Personal", "Work", "Shopping"]);
 
   useEffect(() => {
     fetch(`http://localhost:9292/todos/${id}`)
@@ -45,7 +42,6 @@ const Todo = () => {
   const handleOpen = () => {
     setTitle(todo.title);
     setDescription(todo.description);
-    setCategory(todo.category);
     setDueDate(todo.due_date);
     setOpen(true);
   };
@@ -62,7 +58,6 @@ const Todo = () => {
       body: JSON.stringify({
         title: title,
         description: description,
-        category: category,
         due_date: due_date,
       }),
     })
@@ -81,7 +76,7 @@ const Todo = () => {
         <>
           <p>Title: {todo.title}</p>
           <p>Description: {todo.description}</p>
-          <p>Category: {todo.category}</p>
+          <p>Category: {todo.category_id}</p>
           <p>DueDate: {todo.due_date}</p>
 
           <Button variant="contained" color="secondary" onClick={handleOpen}>
@@ -89,7 +84,7 @@ const Todo = () => {
           </Button>
         </>
       ) : (
-        <span class="loader"></span>
+        <span className="loader"></span>
       )}
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Edit Todo</DialogTitle>
@@ -120,19 +115,6 @@ const Todo = () => {
             multiline
             rows={4}
           />
-          <Select
-            margin="dense"
-            label="Category"
-            value={category}
-            onChange={(event) => setCategory(event.target.value)}
-            fullWidth
-          >
-            {categories.map((category) => (
-              <MenuItem key={category.id} value={category.id}>
-                {category.name}
-              </MenuItem>
-            ))}
-          </Select>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
