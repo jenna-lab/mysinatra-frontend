@@ -18,6 +18,30 @@ We build a todo list application with a React frontend interface and a Sinatra b
 
 ## SetUp/Installation requirements
 
+    - Create a new React app using npx create-react-app.
+
+- Set up the necessary dependencies for the frontend, including fetch (for making HTTP requests), react-router-dom (for handling client-side routing), and any other dependencies required for the project.
+
+- Create a folder structure for your frontend that will include a components folder.
+
+- Create a component for your Todo list, which will render a list of all the todos. This component will also have a form for adding new todos, and buttons for updating and deleting todos.
+
+- Create a service file for making HTTP requests to the Sinatra backend. This file will use axios to make requests to the API endpoints.
+
+- Set up the Sinatra backend by creating a new project and installing the necessary dependencies.
+
+- Create a folder structure for your backend that will include a models folder, a controllers folder, and any other folders you may need.
+
+- Create a model for your Todo, which will define the structure of a Todo and its association with Categories.
+
+- Create a controller for your Todo, which will handle requests to the API endpoints for creating, reading, updating, and deleting Todos.
+
+- Create a migration file to create a table for your Todos in the database.
+
+- Set up the necessary routes in your Sinatra application for the API endpoints.
+
+- Test the application by running both the frontend and backend servers and ensuring that you can create, read, update, and delete Todos.
+
 ## Requirements
 
 - React
