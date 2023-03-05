@@ -42,7 +42,7 @@ jensam209@gmail.com
 
 ## License
 
-License 'https://github.com/jenna-lab/phase3codechallenge1/blob/main/LICENSE.md' \*\*jennifer sammy.
+License 'https://github.com/jenna-lab/mysinatra-frontend/blob/main/License.md' \*\*jennifer sammy.
 
 ## Learn More
 
