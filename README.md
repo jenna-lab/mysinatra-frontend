@@ -1,43 +1,48 @@
-# Getting Started with Create React App
+# TO-DO LIST REACT App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Jennifer Sammy
 
-## Available Scripts
+## 05-03-2023
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+The focus of this project is building a Sinatra API backend that uses Active Record to access and persist data in a database, which will be used by a separate React frontend that interacts with the database via the API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+We build a todo list application with a React frontend interface and a Sinatra backend API, where a user can:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Create a new todo
+- Read a list of all todos
+- Update an individual todo
+- Delete a todo
+  A Todo can be tagged with a Category, so that each todo belongs to a category and each category has many todos.
 
-### `npm test`
+## SetUp/Installation requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
 
-### `npm run build`
+- React
+- Active record/sinatra backend host
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deliverables
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Create a new todo
+- Read a list of all todos
+- Update an individual todo
+- Delete a todo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Videolink
 
-### `npm run eject`
+## Bugs
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+There are no bugs in this project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Support?contact details
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+jensam209@gmail.com
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
+
+License 'https://github.com/jenna-lab/phase3codechallenge1/blob/main/LICENSE.md' \*\*jennifer sammy.
 
 ## Learn More
 
