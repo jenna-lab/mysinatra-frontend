@@ -6,7 +6,7 @@ const Homepage = () => {
       <div className="card shadow-sm">
         <div className="card-header bg-dark text-white">
           <h3 className="card-title">
-            <i className="bi bi-list-task"></i> My To-Do List
+            <i className="bi bi-list-task"></i> To-Do
           </h3>
         </div>
         <div className="card-body">

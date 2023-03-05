@@ -80,7 +80,10 @@ const TodoForm = ({ addTodo }) => {
             <option value="">Select category</option>
             <option value="Work">Work</option>
             <option value="Personal">Personal</option>
-            <option value="Family">Family</option>
+            <option value="Family">Shopping</option>
+            <option value="Family">Health</option>
+            <option value="Family">Fitness</option>
+            <option value="Family">Home</option>
           </select>
         </div>
         <div className="mb-3">

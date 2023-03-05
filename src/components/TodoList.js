@@ -38,7 +38,6 @@ const TodoList = () => {
           <Link to={`/to-do/${todo.id}`} className="btn btn-secondary">
             Edit
           </Link>{" "}
-          <button className="btn btn-primary">Save</button>{" "}
           <button
             className="btn btn-danger"
             onClick={() => handleDelete(todo.id)}

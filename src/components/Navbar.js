@@ -5,7 +5,7 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-primary">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          Todo
+          My To-do List
         </Link>
         <button
           className="navbar-toggler"
